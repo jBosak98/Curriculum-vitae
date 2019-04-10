@@ -1,0 +1,164 @@
+% -- Encoding UTF-8 without BOM
+% -- XeLaTeX => PDF (BIBER)
+
+\documentclass[]{cv-style}      
+
+
+\usepackage{tikz}
+\usepackage{xcolor}
+
+\definecolor{white}{RGB}{255,255,255}
+\definecolor{gray}{HTML}{4D4D4D}
+\definecolor{maingray}{HTML}{EBEBEB}
+\newcommand\skillsRow[1]{ 
+    \begin{tikzpicture}
+        \foreach [count=\i] \x/\y in {#1}{
+            \draw[fill=maingray,maingray] (0,\i) rectangle (3.55,\i+0.4);
+            \draw[fill=white,gray](3.55,\i) rectangle (3.55-\y,\i+0.4);
+            \node[below left] at (3.7,\i+0.9) {\newline\textbf{\x}};
+        }
+        \end{tikzpicture}
+     \newline
+}
+\sethyphenation[variant=british]{english}{} 
+
+\begin{document}
+
+\header{Jakub}{Bosak}           
+% \lastupdated
+
+%----------------------------------------------------------------------------------------
+%	SIDEBAR SECTION  -- In the aside, each new line forces a line break
+%----------------------------------------------------------------------------------------
+
+\begin{aside}
+~
+~
+\section{contact}
+724731815
+jbosak98@gmail.com
+\section{GitHub}
+github.com/jbosak98
+\section{languages}
+English - high intermediate
+Polish - native speaker
+\section{skills}
+~
+\skillsRow{{Kotlin/2.5}}
+\skillsRow{{Java/2}}
+\skillsRow{{Hibernate/2.5}}
+\skillsRow{{Spring Boot/2}}
+\skillsRow{{JavaScript/1.5}}
+\skillsRow{{React/2}}
+\section{other skills}
+Gradle
+JPA
+REST
+Maven
+SQL
+Git
+Linux
+\end{aside}
+
+%----------------------------------------------------------------------------------------
+% 	ABOUT SECTION
+%----------------------------------------------------------------------------------------
+\vspace{0.6cm}
+
+\section{About me}
+\vspace{-0.2cm}
+I am a second year student who want to acquire new skills and do interesting things. I really enjoy Open Source Software so I am an active member of Academic IT association where I learned a lot and I had the possibility to help in organizing the event about open source - Linux Session.
+%----------------------------------------------------------------------------------------
+%	Projects SECTION
+%----------------------------------------------------------------------------------------
+{\vspace{0.3cm}}
+\section{Projects}
+
+\begin{entrylist}
+%------------------------------------------------
+\entry
+  {11.2018--3.2019}
+  { Labday Backend}
+  {}
+  {\jobtitle{Java, Spring Boot, Hibernate, Postgres, Maven}\\
+  Implemented a web server which served data about\newline events that occurs on Labday happening and shared\newline to mobile and web application by REST API.}
+%------------------------------------------------
+
+\entry
+  {\newline\newline11.2018--3.2019  }
+  { Labday Admin Panel}
+  {}
+  {\jobtitle {JavaScript, React, Redux, Material-UI}\\
+  Implemented a web application that allowed to manage\newline data from Labday Backend using simple calendar.}
+  {\vspace{-0.3cm}}
+%------------------------------------------------
+\end{entrylist}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Education}
+
+\begin{entrylist}
+%------------------------------------------------
+\entry
+{2017--present\quad }
+{ BSc Eng. {\normalfont  in Computer Science}}
+{Wrocław University of Science and Technology}
+{ Studying in English}
+{\vspace{0.3cm}}
+%------------------------------------------------
+\end{entrylist}
+
+%----------------------------------------------------------------------------------------
+%	OTHER QUALIFICATIONS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Organizations}
+
+\begin{entrylist}
+%------------------------------------------------
+\entry
+{2014 -- 2017}
+{\quad Bieszczadzka Akademia Robotyki}
+{developing a passion for embedded systems}
+{\vspace{0.3cm}}
+%------------------------------------------------
+\entry
+{2018 -- present}
+{\quad{Akademickie Stowarzyszenie Informatyczne}}
+{open source enthusiast}
+{\vspace{0.4cm}}
+%------------------------------------------------
+\end{entrylist}
+
+%----------------------------------------------------------------------------------------
+%	AWARDS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Activities}
+
+\begin{entrylist}
+%------------------------------------------------
+\entry
+{2016}
+{4th place in Krakrobot competition in Kraków}
+{team competition}
+%------------------------------------------------
+
+\entry
+{2019}
+{Organizing the Linux Session event}
+{Open Source conference}
+{}
+%------------------------------------------------
+\end{entrylist}
+
+
+\vspace{4cm}
+
+
+
+{\footnotesize Zgadzam się na przetwarzanie moich danych osobowych zawartych\newline w  zgłoszeniu rekrutacyjnym dla celów przyszłych rekrutacji.}
+\end{document}
